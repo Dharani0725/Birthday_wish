@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Project</title>
+          <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    
+<div id="partOne" style="display:block;">
+        <form>
+       
+            <div id="box">
+            <p id="instruction"><b>Enter password to proceed</b></p>
+                <input type="password" id="passinput" placeholder="Enter the password" required></input>
+                <button id="enterBtn" type="button" onclick="first()">Confirm</button>
+            </div>
+        </form>
+</div>
+ 
+ 
+ 
+<div id="partTwo" style ="display:none;">
+    
+    <div class="compilation">
+           
+             <img src="https://i.ibb.co/XthPgKR/Screenshot-2024-05-20-19-26-41-05-40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Screenshot-2024-05-20-19-26-41-05-40deb401b9ffe8e1df2f1cc5ba480b12" border="0">
+
+<img src="https://i.ibb.co/DrNzPG1/Screenshot-2024-06-07-16-30-19-44-b783bf344239542886fee7b48fa4b892.jpg" alt="Screenshot-2024-06-07-16-30-19-44-b783bf344239542886fee7b48fa4b892" border="0">
+
+<img src="https://i.ibb.co/yYm0DmR/Screenshot-2024-05-15-10-13-30-54-1c337646f29875672b5a61192b9010f9.jpg" alt="Screenshot-2024-05-15-10-13-30-54-1c337646f29875672b5a61192b9010f9" border="0">
+
+<img src="https://i.ibb.co/MRn464T/17289877682051075004344006209733.jpg" alt="17289877682051075004344006209733" border="0">
+       </div>
+        
+        <div class="btn" id="btn" style="display:none;">
+        
+              <button id="prv" onclick="previous()">previous</button>
+              
+            <button id ="nxt" onclick="next()">next</button>
+            
+            <button id="exit" onclick="last()">NEXT</button>
+            
+          
+            
+            
+        </div>
+</div>
+
+<div id="realPartTwo" style="display:none;"> 
+  <div id="fbody">
+      <h1 id="msg1">I wish u a very happyyyy birthday.</h1>
+      <h1 id="msg2">Here are a few flowers for u !!!</h1>
+        <img src="https://i.ibb.co/kgHRdTw/1729077990604.png" width="300" height="auto" id="flower">
+        
+        <button id="btn1" type="button" onclick="nextone()" >Next</button>
+      </div>  
+       </div>
+
+    <div id="letter" style="display:none;">
+         <img src="https://i.ibb.co/Kbrkdn3/Screenshot-2024-10-20-20-22-29-92-c0d35d5c8ea536686f7fb1c9f2f8f274.jpg" alt="Screenshot-2024-10-20-20-22-29-92-c0d35d5c8ea536686f7fb1c9f2f8f274" border="0" id="letter">
+      
+      <button id="lastButton" type="button" onclick="toExit()">EXIT</button>
+     
+     </div>
+     
+  <style>
+       form {
+    display:flex;
+    justify-content:center ;
+    align-items:center ;
+    min-height:100vh;
+ background-image:url("https://i.ibb.co/JRMZbfN/images-18.jpg");
+   background-size:cover;
+    
+}
+
+#box{
+    background-color:rgba(255,255,255,0.1);
+    width:250px;
+    height:280px;
+    position:absolute;
+    border-radius:10px;
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 8px 32px 0 rgba(0,0,0 ,0.5)
+    
+    
+
+}
+
+#passinput{
+    display:flex;
+    margin-left:8px;
+    margin-top:30px;
+    height:40px;
+    width:230px;
+    border-radius:10px;
+    border:none;
+    outline:none;
+    
+}
+
+#instruction{
+    display:flex;
+    justify-content:center; 
+    margin-top:70px;
+
+}
+
+#enterBtn{
+    display:felx;
+    justify-content:center; 
+    margin-top:40px;
+    width:50%;
+    margin-left:60px;
+    border-radius:10px;
+    border:none;
+    background-color:lime;
+    padding:5px ; 
+}
+
+.compilation img {
+    height:600px;
+    width:350px;
+    display:none;
+}
+
+
+
+#nxt,#prv{
+    position:relative;
+    background-color:pink;
+    border:none;
+    border-radius:25px;
+    font-size:20px;
+    padding:7px 15px;
+    
+}
+
+#prv{
+    display:none;
+    position:absolute;
+    bottom:50px;
+    left:20px;
+}
+
+#nxt{
+    position:absolute;
+    bottom:50px;
+    right:20px;
+}
+
+
+#exit{
+    display:none;
+    border:none;
+    background-color:red;
+    padding:7px 15px;
+    font-size:20px;
+    border-radius:25px;
+    position:absolute;
+    bottom:50px;
+    right:20px;
+    
+}
+
+    #flower{ 
+           margin-left:20px;
+           margin-top:150px;
+           }
+           
+           #fbody {
+    background-color:#ffc405 ; 
+    height:610px;
+    
+    
+}
+
+           #msg1{
+              
+              position:absolute;
+              top:5px;
+              left:15px;
+               }
+               
+         #msg2{
+             position:absolute;
+             top:100px;
+             left:15px;
+         }
+         
+         #btn1{
+            position:absolute;
+            top:550px;
+            left:95px;
+            padding:15px;
+            width:150px;
+            border-radius:13px;
+            border:none;
+            font-size:15px;
+            background-color:#e89eb8;
+         }
+
+         
+#letter{
+    height:500px;
+    width:350px;
+    position:relative;
+    top:15px;
+}
+
+#lastButton{
+    position:absolute ;
+    top:535px;
+    right:150px;
+    background-color:seagreen;
+    border:none;
+    border-radius:18px;
+    height:40px;
+    width:70px;
+}
+   </style>
+   
+    <script>
+           let index = 0;
+
+const images = document.querySelectorAll('.compilation img');
+
+const front = document.getElementById('nxt')
+
+const back = document.getElementById('prv')
+
+const exit = document.getElementById('exit')
+
+
+
+
+
+if(images.length > 0){
+    images[index].style.display = 'block';
+}
+
+function updateButtons(){
+    if(index === 0){
+        back.style.display = 'none'
+    }
+    else{
+        back.style.display = 'inline-block'
+    }
+    
+    if(index === images.length - 1){
+        front.style.display = 'none'
+    }
+    else{
+        front.style.display = 'inline-block'
+    }
+    
+}
+
+
+function next(){
+    if(images.length > 0){
+        images[index].style.display = 'none';}
+        index++;
+        images[index].style.display = 'block';
+   
+   updateButtons();
+   
+   if(index === images.length - 1){
+       exit.style.display = 'block';
+   }
+   else{
+       exit.style.display = 'none';
+   }
+    }
+    
+
+
+function previous(){
+    if(images.length > 0){
+        images[index].style.display = 'none';}
+        index--;
+        images[index].style.display = 'block';
+    
+    updateButtons();
+    
+    if(index === images.length - 1){
+       exit.style.display = 'block';
+   }
+   else{
+       exit.style.display = 'none';
+   }
+   
+    }
+
+
+function first(){
+    var part1 = document.getElementById("partOne")
+    
+    
+    
+    var rpart2 = document.getElementById("realPartTwo")
+    
+    const key = "25102008"
+    
+    var entered = document.getElementById("passinput").value
+    
+    if(entered === key){
+   
+    alert("Password correct")
+    part1.style.display = "none"
+    rpart2.style.display = "block"
+        
+        
+    }
+    else{
+        part1.style.display = "block";
+        
+        rpart2.style.display = "none";
+        
+        alert("Password incorrect")
+       document.getElementById("passinput").value = "";
+    }
+ }
+    
+function nextone(){
+    var part2 = document.getElementById("partTwo")
+    
+    var rpart2 = document.getElementById("realPartTwo")
+    
+    var press = document.getElementById("btn")
+    
+    alert("Next you are gonna see a few poems written by me for you")
+    
+    rpart2.style.display = "none";
+    part2.style.display = "block";
+    press.style.display = "block";
+    
+    
+    
+}
+
+function toExit(){
+    var ltr = document.getElementById("letter")
+    
+    alert("I hope you liked the entire thing. I once again wish u a very happyyy birthday. And I am sorry if anything is wrong in this. Byeeeee")
+    
+    ltr.style.display = "none";
+}
+
+function last(){
+   var close =  document.getElementById("letter")
+   
+   var part2 = document.getElementById("partTwo")
+   
+   alert("Here is a letter for you")
+   
+   part2.style.display = "none";
+   close.style.display = "block"
+    
+}
+       </script>
+        
+    </body>
+</html>
